@@ -27,10 +27,11 @@ main {
     grid-area: pri;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 90% 10%;
     height: 60vh;
     justify-items: center;
     background-color: white;
-    padding: 2vh;
+    padding: 2% 20%;
 }
 
 footer {
@@ -74,18 +75,29 @@ header i {
 }
 
 .tarjeta {
+    min-height: 100%;
+    background-color: white;
+    border: solid 1px black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 1px black;
-    height: 50vh;
-    background-color: white;
-    padding: 0 10%;
+ 
 }
 
-.producto img {
-    height: 30vh;
-    width: 100%;
+.imagen {
+    width: 50%;
+}
+
+.producto {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /*para aprovechar todo el espacio disponible*/
+    align-items: center;
+}
+
+.producto h3, .producto p{
+    margin: 0;
 }
 
 button {
@@ -94,6 +106,10 @@ button {
 
 button:hover {
     background-color: #ba8bc2;
+}
+
+.paginacion{
+    grid-row-start: 2;
 }
 
 @media (max-width:576px) {
@@ -114,7 +130,7 @@ button:hover {
 
     header {
         flex-direction: column;
-        height: 100%;
+        height: 80vh;
         padding-top: 10%;
         justify-content: flex-start;
         color: white;
@@ -160,26 +176,32 @@ button:hover {
     }
 
     main {
+        grid-template-rows: none;
         grid-template-columns: repeat(4, 1fr);
-        height: 100%;
+        height: 85vh;
         width: 100%;
         justify-items: center;
         gap: 1%;
+        padding: 1%;
     }
 
     .tarjeta {
         padding: 0;
-        width: 100%;
         height: 100%;
     }
 
-    .producto img {
-        height: auto;
-        width: 100%;
+    .imagen{
+        width: 30%;
+    }
+
+    .paginacion{
+        grid-row-start: 3;
+        grid-column-end: 3;
+        align-self:flex-end;
     }
 
     footer {
-        height: 100%;
+        height: 20vh;
         text-align: center;
         justify-content: space-around;
     }
