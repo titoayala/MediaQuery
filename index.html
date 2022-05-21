@@ -1,17 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4ce5aff524.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <title>Sitio Responsivo</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Aceites Esenciales con MediaQuery</title>
 </head>
+
 <body>
-    
+    <div class="Contenedor-grid">
+        <header>
+            <div class="titulo">
+                <i class="fa-solid fa-bottle-droplet fa-2x"></i>
+                <h1>Aceites Esenciales</h1>
+            </div>
+            <i id="barras" class="fa-solid fa-bars fa-xl"></i>
+
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Aceites</a></li>
+                <li><a href="#">Difusores</a></li>
+                <li><a href="#">Promociones</a></li>
+            </ul>
+        </header>
+
+        <section class="buscador">
+            <h3>Ordenar por:</h3>
+            <select name="buscar" id="buscar">
+                <option value="1">Menor precio</option>
+                <option value="2">Mayor precio</option>
+                <option value="3">Descuento</option>
+            </select>
+        </section>
+
+        <main>
+            <div class="tarjeta">
+                <div class="producto">
+                    <img src="assets/imgs/copaiba.png" alt="Aceite Copaiba">
+                </div>
+                <h3>Copaiba</h3>
+                <p>Usado como Anti inflamatorio</p>
+                <button type="button">Ver más</button>
+            </div>
+            <div class="tarjeta dos">
+                <div class="producto">
+                    <img src="assets/imgs/cypress.png" alt="Aceite Cypress">
+                </div>
+                <h3>Cypress</h3>
+                <p>Mejora la circulación sanguínea</p>
+                <button class="" type="button">Ver más</button>
+            </div>
+            <div class="tarjeta dos">
+                <div class="producto">
+                    <img src="assets/imgs/eucalyptus.png" alt="Aceite Eucalyptus">
+                </div>
+                <h3>Eucalyptus</h3>
+                <p>Para liberar las vías respiratorias</p>
+                <button class="" type="button">Ver más</button>
+            </div>
+            <div class="tarjeta dos">
+                <div class="producto">
+                    <img src="assets/imgs/lavender.png" alt="Aceite Lavanda">
+                </div>
+                <h3>Lavanda</h3>
+                <p>Tranquilizante, relajante</p>
+                <button class="" type="button">Ver más</button>
+            </div>
+            <div class="tarjeta dos">
+                <div class="producto">
+                    <img src="assets/imgs/lemon.png" alt="Aceite Limón">
+                </div>
+                <h3>Limón</h3>
+                <p>Antioxidante y antiséptico</p>
+                <button class="" type="button">Ver más</button>
+            </div>
+            <div class="tarjeta dos">
+                <div class="producto">
+                    <img src="assets/imgs/peppermint.png" alt="Aceite Menta">
+                </div>
+                <h3>Menta</h3>
+                <p>Energizante</p>
+                <button class="" type="button">Ver más</button>
+            </div>
+            <div class="tarjeta dos">
+                <div class="producto">
+                    <img src="assets/imgs/spearmint.png" alt="Aceite Spearmint">
+                </div>
+                <h3>Yerbabuena</h3>
+                <p>Estimulante digestivo</p>
+                <button class="" type="button">Ver más</button>
+            </div>
+            <div class="tarjeta dos">
+                <div class="producto">
+                    <img src="assets/imgs/tea-tree.png" alt="Aceite Arbol de té">
+                </div>
+                <h3>Tea Tree</h3>
+                <p>Antibiótico Natural</p>
+                <button class="" type="button">Ver más</button>
+            </div>
+
+            <div class="paginacion">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="iconos">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+            </div>
+            <h3>Todos los derechos reservados.</h3>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
